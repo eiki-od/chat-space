@@ -7,12 +7,34 @@
         名前 : 
         %li.Chat-test__myname__mine 
           えいき
-    .Chat-edit edit
-
-
-
-
-
+    .Chat-edit
+      = link_to "#", class: "btn" do
+        Edit
 
   .Chat-main__message-list
+    .Chat-main-leftbox
+      .Chat-main-myname
+        えいき
+      .Chat-main-daytime
+        2020.6.25
+    .Chat-main-message
+      こんにちは
+    .Chat-main-leftbox
+      .Chat-main-myname
+        えいき
+      .Chat-main-daytime
+        2020.6.25
+    .Chat-main-message
+      こんにちは
+
+
   .Chat-main__message-form
+    .Form
+      .Form-new-massage
+        = form_with url: "#", html:{class: "form"} do |f|
+          = f.text_field :content, call: 'form__'
+          = f.submit 'send'
+           
+      .Form-new-gallery
+        
+      

@@ -61,12 +61,17 @@ background-color: #d2d2d2;
   color: #999999;
   font-size: 12px;
 }
-
+.Chat-edit {
+  font-size: 16px;
+  border: 1px solid #38aef0;
+  margin: 28px 40px;
+  padding: 3px 20px;
+  text-decoration: none;
+}
 
 .Side-box {
   height: 20px;
   width: 260px;
-  // background-color: #d8d8d8;
   margin: 0 20px;
   display: flex;
   justify-content: space-between;
@@ -90,4 +95,57 @@ background-color: #d2d2d2;
   font-size: 11px;
   padding: 5px 20px 40px 20px;
 }
+.btn{
+  color: #38aef0;
+  text-decoration: none;
+}
 
+.Chat-main-myname {
+  color: #333333;
+  font-size: 16px;
+}
+.Chat-main-leftbox {
+  display: flex;
+  justify-content: left;
+  padding: 35px 0 12px 40px;
+}
+.Chat-main-message {
+  color: #434a54;
+  margin: 0 0 0 40px;
+  font-size: 14px;
+}
+.Chat-main-daytime {
+  color: #999999;
+  font-size: 12px;
+  margin: 0 10px;
+}
+
+
+
+.Form {
+  display: flex;
+}
+.submit{
+  color: white;
+  background-color: #38aef0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.submit-btn {
+  width: 100px;
+  height: 50px;
+  padding: 0 30px;
+  margin-left: 15px;
+  background-color: #eeeeee;
+  font-size: 15px;
+  color: #1a1d21;
+}
