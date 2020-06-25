@@ -44,8 +44,23 @@ background-color: #fafafa;
 height: 90px;
 background-color: #d2d2d2;
 }
-
-
+.Chat-test__myname{
+  display: flex;
+}
+.Chat-test__member{
+  color: #333333;
+  font-size: 20px;
+  padding: 35px 0 0 40px;
+}
+.Chat-test__myname{
+  color: #999999;
+  font-size: 12px;
+  margin: 15px 0 0 40px;
+}
+.Chat-test__myname__mine {
+  color: #999999;
+  font-size: 12px;
+}
 
 
 .Side-box {
@@ -76,9 +91,3 @@ background-color: #d2d2d2;
   padding: 5px 20px 40px 20px;
 }
 
-.Chat-test {
-  padding: 35px 0 0 40px;
-}
-.Chat-memberlist {
-  display: flex;
-}
