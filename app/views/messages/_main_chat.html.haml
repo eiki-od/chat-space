@@ -4,7 +4,7 @@
       %h2.Chat-test__member   
         メンバー
       %ul.Chat-test__myname 
-        名前 : 
+        menber : 
         %li.Chat-test__myname__mine 
           えいき
     .Chat-edit
@@ -29,12 +29,32 @@
 
 
   .Chat-main__message-form
-    .Form
-      .Form-new-massage
-        = form_with url: "#", html:{class: "form"} do |f|
-          = f.text_field :content, call: 'form__'
-          = f.submit 'send'
-           
-      .Form-new-gallery
-        
+    .Form-new-massage
+      .Form__coment
+        %input.form{:name => "title", :size => "40",placeholder:"type a message"}
+        %label.gallery{ class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "hidden" }
+      .Form__send
+        %input{:type => "submit", :value => "send", class:"submit"}
+      
+
+
+
+
+
+
+
+
+
+
+
+      -# = form_with url: "#", html:{class: "form"} do |f|
+      -#   = f.text_field :content, class: 'form__text', placeholder: "入力してね"
+      -#   = f.submit 'send', class: 'form__send'    
+      -# = link_to"#",class: "Form__btn__icon"do
+      -#   = icon('fas','image',class: "file")
+          
+
+       
       
