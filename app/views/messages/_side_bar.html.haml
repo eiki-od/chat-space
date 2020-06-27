@@ -2,13 +2,14 @@
   .Side__head
     .Side__box   
       .Side__name
-        abc 
+        = current_user.name
       .Side__icon 
         = link_to"#",class: "Contents__btn--icon"do
           = icon('far','edit', class: 'pen')
           %span<>
         = link_to"#",class: "Contents__btn--icon"do
-          = icon('fa','cogs', class: 'gear')
+          = link_to edit_user_path(current_user)do
+            = icon('fa','cogs', class: 'gear')
           %span<>
   .Side__main 
     .Side-message Tech camp
