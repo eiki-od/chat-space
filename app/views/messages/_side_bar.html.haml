@@ -4,7 +4,7 @@
       .Side__name
         = current_user.name
       .Side__icon 
-        = link_to"#",class: "Contents__btn--icon"do
+        = link_to new_group_path,class: "Contents__btn--icon"do
           = icon('far','edit', class: 'pen')
           %span<>
         = link_to"#",class: "Contents__btn--icon"do
@@ -12,11 +12,10 @@
             = icon('fa','cogs', class: 'gear')
           %span<>
   .Side__main 
-    .Side-message Tech camp
-    .Side-text メッセージがあります
-    .Side-message Tech camp
-    .Side-text メッセージがあります
-    .Side-message Tech camp
-    .Side-text メッセージがあります
-    .Side-message Tech camp
-    .Side-text メッセージがあります
+    - current_user.groups.each do |group|
+      .Group
+        = link_to '#' do
+          .Group__name
+            = group.name
+          .Group__message
+            メッセージはまだありません
