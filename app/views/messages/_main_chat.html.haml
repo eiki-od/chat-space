@@ -1,36 +1,32 @@
 .Chat
   .Chat-main__group-info
     .Chat-leftbox
-      %h2.Chat-test__member   
-        メンバー
-      %ul.Chat-test__myname 
+      .Chat-test__member   
+        = @group.name 
+      .Chat-test__myname 
         menber : 
-        %li.Chat-test__myname__mine 
-          えいき
+        .Chat-test__myname__mine 
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
     .Chat-edit
       = link_to "#", class: "btn" do
         Edit
+
   .Chat-main__message-list
-    .Chat-main-leftbox
-      .Chat-main-myname
-        えいき
-      .Chat-main-daytime
-        2020.6.25
-    .Chat-main-message
-      こんにちは
-    .Chat-main-leftbox
-      .Chat-main-myname
-        えいき
-      .Chat-main-daytime
-        2020.6.25
-    .Chat-main-message
-      こんにちは
+    = render @messages
+
   .Chat-main__message-form
-    .Form-new-massage
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__coment
-        %input.form{name:  "title", :size => "40",placeholder:"type a message"}
-        %label.gallery{ class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "hidden" }
-      .Form__send
-        %input{type:  "submit", value: "send", class:"submit"}
+        = f.text_field :content, class: 'form-text', placeholder: 'type a message'
+        = f.label :image, class: 'gallery' do
+          = icon('fas', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'submit'
+
+      -#   %input.form{name:  "title", :size => "40",placeholder:"type a message"}
+      -#   %label.gallery{ class: "input-box__image"}
+      -#     = icon('fas', 'image')
+      -#     %input{type: "file", class: "hidden" }
+      -# .Form__send
+      -#   %input{type:  "submit", value: "send", class:"submit"}
