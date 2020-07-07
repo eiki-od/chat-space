@@ -102,21 +102,21 @@
   color: #38aef0;
 }
 
-.Chat-main__message-list{
+.Chat-main__message-list {
   height: calc(100vh - 190px);
   background-color: #fafafa;
   padding: 35px 40px 0px;
   overflow: scroll;
   }
   .Chat-main__message-list__info {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
 .Chat-main__message-list__info__user-name {
- margin-bottom: 46px; 
  color: #333333;
  font-size: 16px;
  display: flex;
+ font-weight: bold;
 }
 .Chat-main__message-list__info__date{
   color: #999;
@@ -172,6 +172,7 @@
   position: absolute;
 }
 .Form__icon{
+  margin: 15px 10px ;
 }
 .Hidden{
   display: none;
